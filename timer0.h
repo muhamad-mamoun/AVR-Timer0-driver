@@ -41,14 +41,13 @@ typedef enum
 
 typedef struct
 {
-	uint16 initial_value;
+	uint8 initial_value;
 	TIMER0_clockPrescalerType prescaler;
 }TIMER0_OVERFLOW_configurationsType;
 
 typedef struct
 {
-	uint16 initial_value;
-	uint16 compare_value;
+	uint8 compare_value;
 	TIMER0_clockPrescalerType prescaler;
 }TIMER0_CTC_configurationsType;
 
@@ -100,7 +99,7 @@ void TIMER0_PWM_init(const TIMER0_PWM_configurationsType* a_ptr2configurations);
  * [Arguments]     : <a_ptr2callbackfunc>      -> Pointer points to the call-back function.
  * [return]        : The function returns void.
  ==========================================================================================================*/
-void TIMER0_setCallBack(void(*a_ptr2callbackfunc)(void));
+void TIMER0_setCallBack(void (*a_ptr2callbackfunc)(void));
 
 
 /*===========================================================================================================
